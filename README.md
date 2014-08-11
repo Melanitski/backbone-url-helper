@@ -8,30 +8,30 @@ This library extends the prototype of backbone routing with one method - `to(rou
 
 ### Example
 
-	```
-	var Main = Backbone.Router.extend({
+```Javascript
+var Main = Backbone.Router.extend({
 
-	    routes: {
-        	"":"index",
-        	"category/:id/:page": "category"
-	    }
+    routes: {
+	"":"index",
+	"category/:id/:page": "category"
+    }
 
-	   //...
+   //...
 
-	});
+});
 
-	var routing = new Main();
-	Backbone.history.start({pushState: true});
+var routing = new Main();
+Backbone.history.start({pushState: true});
 
 
-	routing.to('index');		// navigate to url "/"
+routing.to('index');		// navigate to url "/"
 
-	routing.to('category', {	// navigate to url "/category/1/1"
-	    'id':1,
-	    'page':1
-	});
+routing.to('category', {	// navigate to url "/category/1/1"
+    'id':1,
+    'page':1
+});
 
-	```
+```
 
 
 
